@@ -23,8 +23,8 @@ const ProductDetails = () => {
       const { data } = await axios.get(
         `/api/v1/car/get-car/${params.slug}`
       );
-      setCar(data?.product);
-      getSimilarProduct(data?.product._id, data?.product.category._id);
+      setCar(data?.car);
+      getSimilarProduct(data?.car._id, data?.car.category._id);
     } catch (error) {
       console.log(error);
     }

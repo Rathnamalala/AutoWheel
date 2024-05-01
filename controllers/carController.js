@@ -188,11 +188,11 @@ export const updateCarController = async (req, res) => {
         return res.status(500).send({ error: "Phone Number is required" });
       case !address:
         return res.status(500).send({ error: "Address is required" }); 
-      case photo && photo.size > 1000000:
-        return res.status(500).send({ error: "Photo is required and should be less than 1MB" });
+      case photo && photo.size > 10000000:
+        return res.status(500).send({ error: "Photo is required and should be less than 10MB" });
     }
 
-    const cars = await carModel.findByIdAndUpdate(
+    const updatedCar = await carModel.findByIdAndUpdate(
       req.params.pid,
       { ...req.fields, slug: slugify(name) },
       { new: true }

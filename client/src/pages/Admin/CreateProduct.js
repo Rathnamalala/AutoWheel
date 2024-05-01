@@ -181,8 +181,8 @@ const CreateCar = () => {
                     setTransmission(value);
                   }}
                 >
-                  <Option value="0">Auto</Option>
-                  <Option value="1">Manual</Option>
+                  <Option value="Auto">Auto</Option>
+                  <Option value="Manual">Manual</Option>
                 </Select>
               </div>
               <div className="mb-3">
@@ -196,8 +196,8 @@ const CreateCar = () => {
                     setCondition(value);
                   }}
                 >
-                  <Option value="0">New</Option>
-                  <Option value="1">Used</Option>
+                  <Option value="New">New</Option>
+                  <Option value="Used">Used</Option>
                 </Select>
               </div>
               <div className="mb-3">
@@ -212,7 +212,7 @@ const CreateCar = () => {
               <div className="mb-3">
                 <input
                   type="text"
-                  value={description}
+                  value={phone}
                   placeholder="Enter your phone number"
                   className="form-control"
                   onChange={(e) => setPhone(e.target.value)}
@@ -221,7 +221,7 @@ const CreateCar = () => {
               <div className="mb-3">
                 <input
                   type="text"
-                  value={description}
+                  value={address}
                   placeholder="Enter your address"
                   className="form-control"
                   onChange={(e) => setAddress(e.target.value)}
